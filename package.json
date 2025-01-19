@@ -1,0 +1,42 @@
+{
+  "name": "notion-next-core",
+  "private": true,
+  "description": "Fast and accurate React renderer for Notion. TS batteries included.",
+  "repository": "czgaotian/notion-next-core",
+  "author": "czgaotian <czgaotian1@gmail.com>",
+  "license": "MIT",
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.12.2",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "turbo build --filter='./packages/*'",
+    "dev": "turbo dev --concurrency 50 --continue",
+    "clean": "turbo clean",
+    "test": "turbo test",
+    "test:format": "prettier --check \"**/*.{js,ts,tsx}\"",
+    "test:lint": "turbo test:lint",
+    "test:typecheck": "turbo test:typecheck",
+    "test:unit": "turbo test:unit",
+    "pretest": "run-s build",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "@fisch0920/eslint-config": "^1.4.0",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/node": "^22.9.0",
+    "del-cli": "^6.0.0",
+    "eslint": "^8.57.1",
+    "npm-run-all2": "^7.0.1",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "turbo": "^2.3.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}
